@@ -1,16 +1,29 @@
 const add = require('./add')
-
 const read = require('./read')
+const write = require('./write')
 
+// get user input
 const cmd = process.argv
 
-if(cmd[2] == 'read') {
-    console.log(read())
-}
+var note = {}
 
 if(cmd[2] == 'add') {
-    const note = {"id": cmd[3], "tittle": cmd[4], "body": cmd[5]}
-    
-    const oldNote = read()
+    // Build Object
+    note = { 
+        id: cmd[3],
+        title: cmd[4],
+        body: cmd[5]
+    }
+    // Get old note value
+    var oldNote = read()
+    // Add note to note.txt
     add(note, oldNote)
 }
+
+if(cmd[2] == 'read') {
+    // Import present
+    const present = require('./present')
+    
+    present(read())
+}
+
