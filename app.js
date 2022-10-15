@@ -26,4 +26,3 @@ if(cmd[2] == 'read') {
     
     present(read())
 }
-
