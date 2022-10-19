@@ -1,9 +1,12 @@
 const add = require('./add')
 const read = require('./read')
 const write = require('./write')
+const del = require('./delete')
+const update = require('./update')
 
 // get user input
 const cmd = process.argv
+const data = process.argv
 
 var note = {}
 
