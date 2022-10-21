@@ -30,10 +30,28 @@ if(cmd[2] == 'read') {
     present(read())
 }
 if (cmd[2] === "delete") {
+
     const id = cmd[3]
+
     const oldnote = read()
+
     const del = require ('./delete')
+
     //delete an item from note array
-    del(id,oldnote)
-    console.log(read)
+
+    del(id, oldnote)
+
+    present(read())
+    
+  }
+
+  if(cmd[2] == 'update') {
+    const note = {
+        id: cmd[3],
+        title: cmd[4],
+        body: cmd[5]
+    }
+
+    const oldNote = read()
+    update(note, oldNote)
   }
