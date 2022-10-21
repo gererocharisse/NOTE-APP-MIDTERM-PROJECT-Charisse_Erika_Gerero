@@ -35,8 +35,6 @@ if (cmd[2] === "delete") {
 
     const oldnote = read()
 
-    const del = require ('./delete')
-
     //delete an item from note array
 
     del(id, oldnote)
