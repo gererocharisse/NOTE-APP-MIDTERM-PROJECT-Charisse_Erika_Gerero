@@ -5,6 +5,8 @@ const del = function(id, oldnote) {
         return n.id !== id
     })
     fs.writeFileSync('note.txt', JSON.stringify(newnote))
+
 }
+
 
 module.exports = del

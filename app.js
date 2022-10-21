@@ -27,11 +27,11 @@ if(cmd[2] == 'read') {
     // Import present
     const present = require('./present')
     
-    present(read())
+    present(read(note, oldNote))
 }
 if (cmd[2] === "delete") {
 
-    const id = cmd[3]
+   const id = cmd[3]
 
     const oldnote = read()
 
