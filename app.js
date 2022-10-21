@@ -41,8 +41,8 @@ if (cmd[2] === "delete") {
 
     del(id, oldnote)
 
-    present(read())
-    
+    console.log(read)
+
   }
 
   if(cmd[2] == 'update') {
